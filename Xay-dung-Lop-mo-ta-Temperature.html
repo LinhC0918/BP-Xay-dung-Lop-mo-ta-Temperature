@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+    <script>
+        function Temperature(Celsius_degree) {
+            this.degree = Celsius_degree;
+            this.convertToFahrenheit = function () {
+                return (this.degree * 1.8 + 32);
+            }
+            this.convertToKenvin = function () {
+                return this.degree + 273.15;
+            }
+        }
+        var temperature = new Temperature(25);
+        document.write('Fahrenheit degrees is:' + temperature.convertToFahrenheit() + '<br/>');
+        document.write('Kenvin degrees is: ' + temperature.convertToKenvin());
+    </script>
+</body>
+</html>
